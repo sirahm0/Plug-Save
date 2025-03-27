@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <title>Plug$Save</title>
+</head>
+
+<body>
+    <h1 id="h1Index">Welcome To Plug&Save</h1>
+    <p id="introText">Plug&Save helps you track and control 
+        your device's energy usage in real-time. Set cost limits, 
+        monitor consumption, and save money while reducing your electricity bill. 
+        Take control of your energy usage today and start saving!</p>
+
+    <div class="container" id="userAcc">
+        <p>Do you already have an account?</p>
+        <div class="options" id="AccOptions">
+            <button onclick="switchToSignup()">Yes, Login</button>
+            <button onclick="switchToLogin()">No, Sign Up</button>
+        </div>
+    </div>
+</body>
+</html>
