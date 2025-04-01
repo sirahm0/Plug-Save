@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Firebase SDK -->
+
+    <title>Plug$Save</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Your Dashboard</h1>
+        <div id="userInfo">
+            <div id="loading">Loading...</div>
+            <div id="userContent" style="display: none;">
+                <p>You are logged in as: <span id="userEmail"></span></p>
+            </div>
+        </div>
+
+        <div id="devicesSection">
+            <h2>Your Devices</h2>
+            <div id="devicesList">
+                <div id="devicesLoading">Loading devices...</div>
+            </div>
+        </div>
+    </div>
+    <button onclick="logout()">Logout</button>
+    <button onclick="switchToAddDev()">Add Device</button>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html> 
