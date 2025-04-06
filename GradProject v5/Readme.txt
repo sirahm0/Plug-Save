@@ -1,0 +1,1 @@
+added device details 

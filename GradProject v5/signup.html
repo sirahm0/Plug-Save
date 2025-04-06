@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr">
+
+<head>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+
+    <title>Signup - Plug&Save</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create Account</h2>
+        <p id="introSignup">Join Plug&Save today to start tracking and 
+            controlling your device's energy consumption. 
+            Fill in the details below to get started and 
+            begin saving on your electricity bill!</p>        
+        <form id="registrationForm">
+            <div class="form-group">
+                <input type="email" id="signupEmail" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="signupPassword" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p id="noteSignup">Already have an account? <button onclick="switchToLogin()">Login</button> </p>
+    </div>
+
+   
+</body>
+</html>
