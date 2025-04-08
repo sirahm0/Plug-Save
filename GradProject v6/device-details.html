@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/device-details.js"></script>
+    <title>Device Details - Plug&Save</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="deviceDetails">
+            <div id="loading">
+                <div class="spinner"></div>
+            </div>
+            <div id="deviceContent">
+                <h1 id="deviceName"></h1>
+                <div class="device-info">
+                    <p>IP Address:<span id="deviceIP"></span></p>
+                    <p>Device ID:<span id="deviceID"></span></p>
+                    <p>Added on:<span id="deviceCreatedAt"></span></p>
+                    <p>Status:<span id="deviceStatus"></span></p>
+                    <p>Last Updated:<span id="lastUpdated"></span></p>
+                    <p>Energy Usage:<span id="energyUsage"></span></p>
+                </div>
+                <div class="device-actions">
+                    <button onclick="deleteDevice()" class="delete-button">Delete Device</button>
+                    <button onclick="switchToDash()" class="back-button">Back to Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html> 

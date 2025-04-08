@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/profile-settings.js"></script>
+    <title>Profile Settings - Plug&Save</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Profile Settings</h1>
+        
+        <!-- Device Statistics Section -->
+        <div class="stats-section">
+            <h2>Your Devices</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Devices</h3>
+                    <p id="totalDevices">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Devices</h3>
+                    <p id="activeDevices">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Savings</h3>
+                    <p id="totalSavings">$0.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Settings Section -->
+        <div class="settings-section">
+            <h2>Account Settings</h2>
+            <div class="profile-info">
+                <p>Name: <span id="displayName">Loading...</span></p>
+                <p>Email: <span id="displayEmail">Loading...</span></p>
+            </div>
+            <div class="settings-buttons">
+                <button onclick="window.location.href='change-password.html'" class="primary-button">Change Password</button>
+                <button onclick="window.location.href='change-name.html'" class="primary-button">Change Name</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <button onclick="switchToDash()" class="nav-button">
+            <span>Dashboard</span>
+        </button>
+        <button onclick="logout()" class="nav-button">
+            <span>Logout</span>
+        </button>
+    </nav>
+</body>
+
+</html> 
