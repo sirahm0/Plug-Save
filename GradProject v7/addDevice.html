@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="EN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link href="css/styles.css?v=2" rel="stylesheet" />
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js?v=2"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js?v=2"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js?v=2"></script>
+    <script src="js/auth.js?v=2"></script>
+    <script src="js/script.js?v=2"></script>
+    <script src="js/addDevice.js?v=2"></script>
+    <title>Add Device - Plug&amp;Save</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo"><span class="icon">⚡</span>
+                <h1>Plug&amp;Save</h1>
+            </div>
+            <h2>Add New Device</h2>
+            <p>Connect your smart plug to start monitoring energy usage. Make sure your device is powered on and connected to the network.</p>
+        </div>
+        <div class="right-panel">
+            <div class="form-box">
+                <h2>Device Details</h2>
+                <form id="deviceForm">
+                    <div class="form-group">
+                        <label for="deviceName">Device Name</label>
+                        <input id="deviceName" placeholder="Enter a name for your device" required="" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="deviceIP">IP Address</label>
+                        <input id="deviceIP" placeholder="Enter device IP address" required="" type="text" />
+                    </div>
+                    <button class="primary-button" type="submit">Connect Device</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <nav class="bottom-nav">
+        <button class="nav-button" onclick="window.location.href='dashboard.html'">Dashboard</button>
+        <button class="nav-button" onclick="window.location.href='addDevice.html'">Add Device</button>
+        <button class="nav-button" onclick="window.location.href='profile-settings.html'">Profile</button>
+    </nav>
+</body>
+
+</html>

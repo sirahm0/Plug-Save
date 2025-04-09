@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="EN">
+
+<head>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link href="/manifest.json" rel="manifest" />
+    <link href="css/styles.css?v=2" rel="stylesheet" />
+    <script src="js/auth.js?v=2"></script>
+    <script src="js/script.js?v=2"></script>
+    <script src="js/dashboard.js?v=2"></script>
+    <title>Plug&amp;Save</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo"><span class="icon">⚡</span>
+                <h1>Plug&amp;Save</h1>
+            </div>
+            <h2>Dashboard</h2>
+            <p>Monitor and manage your smart devices from one place.</p>
+        </div>
+        <div class="right-panel">
+            <div class="dashboard-content">
+                <div id="userInfo" class="dashboard-card">
+                    <div id="loading">
+                        <div class="spinner"></div>
+                    </div>
+                    <div id="userContent">
+                        <h2>Welcome, <span id="userEmail"></span>!</h2>
+                    </div>
+                </div>
+                <div id="devicesSection" class="dashboard-card">
+                    <h2>Your Devices</h2>
+                    <div id="devicesList">
+                        <div id="devicesLoading">Loading devices...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="bottom-nav">
+        <button class="nav-button" onclick="window.location.href='dashboard.html'">Dashboard</button>
+        <button class="nav-button" onclick="window.location.href='addDevice.html'">Add Device</button>
+        <button class="nav-button" onclick="window.location.href='profile-settings.html'">Profile</button>
+    </nav>
+</body>
+
+</html>
