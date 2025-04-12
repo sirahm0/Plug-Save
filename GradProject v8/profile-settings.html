@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="EN">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js?v=2"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js?v=2"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js?v=2"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link href="/manifest.json" rel="manifest" />
+    <link href="css/styles.css?v=2" rel="stylesheet" />
+    <script src="js/auth.js?v=2"></script>
+    <script src="js/script.js?v=2"></script>
+    <script src="js/profile-settings.js?v=2"></script>
+    <title>Profile Settings - Plug&amp;Save</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">
+                <span class="icon">⚡</span>
+                <h1>Plug&amp;Save</h1>
+            </div>
+            <h2>Profile Settings</h2>
+            <p>Manage your account settings and preferences.</p>
+        </div>
+        <div class="right-panel">
+            <div class="profile-content">
+                <div class="profile-card">
+                    <h2>Account Information</h2>
+                    <div class="profile-info">
+                        <p>Email: <span id="userEmail"></span></p>
+                    </div>
+                    <div class="profile-actions">
+                        <a href="change-name.html" class="action-button view-button">Change Name</a>
+                        <a href="change-password.html" class="action-button view-button">Change Password</a>
+                        <button class="action-button logout-button" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="bottom-nav">
+        <button class="nav-button" onclick="window.location.href='dashboard.html'">Dashboard</button>
+        <button class="nav-button" onclick="window.location.href='addDevice.html'">Add Device</button>
+        <button class="nav-button" onclick="window.location.href='profile-settings.html'">Profile</button>
+    </nav>
+</body>
+
+</html>

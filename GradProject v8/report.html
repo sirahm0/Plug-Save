@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="EN">
+<head>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link href="/manifest.json" rel="manifest" />
+    <link href="css/styles.css?v=2" rel="stylesheet" />
+    <title>Energy Report - Plug&amp;Save</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo"><span class="icon">⚡</span>
+                <h1>Plug&amp;Save</h1>
+            </div>
+            <h2>Energy Report</h2>
+            <p>Comprehensive energy consumption and savings report for all your devices.</p>
+        </div>
+        <div class="right-panel">
+            <div class="report-content">
+                <div id="reportCard" class="report-card">
+                    <div id="loading">
+                        <div class="spinner"></div>
+                    </div>
+                    <div id="reportContent" style="display: none;">
+                        <div class="report-header">
+                            <h2>Energy Consumption Report</h2>
+                            <p id="reportDate">Generated on: <span id="generationDate">Loading...</span></p>
+                        </div>
+                        
+                        <!-- Summary Section -->
+                        <div class="report-section">
+                            <h3>Summary</h3>
+                            <div class="summary-grid">
+                                <div class="summary-card">
+                                    <span class="summary-label">Total Devices:</span>
+                                    <span class="summary-value" id="totalDevices">0</span>
+                                </div>
+                                <div class="summary-card">
+                                    <span class="summary-label">Active Devices:</span>
+                                    <span class="summary-value" id="activeDevices">0</span>
+                                </div>
+                                <div class="summary-card">
+                                    <span class="summary-label">Total Monthly Usage:</span>
+                                    <span class="summary-value" id="totalMonthlyUsage">0.00 KW</span>
+                                </div>
+                                <div class="summary-card">
+                                    <span class="summary-label">Total Monthly Cost:</span>
+                                    <span class="summary-value" id="totalMonthlyCost">0.00 SAR</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Savings Section -->
+                        <div class="report-section">
+                            <h3>Savings Analysis</h3>
+                            <div class="savings-grid">
+                                <div class="savings-card">
+                                    <span class="savings-label">Estimated Monthly Savings:</span>
+                                    <span class="savings-value" id="monthlySavings">0.00 SAR</span>
+                                </div>
+                                <div class="savings-card">
+                                    <span class="savings-label">Annual Savings Projection:</span>
+                                    <span class="savings-value" id="annualSavings">0.00 SAR</span>
+                                </div>
+                                <div class="savings-card">
+                                    <span class="savings-label">Carbon Footprint Reduction:</span>
+                                    <span class="savings-value" id="carbonReduction">0.00 kg CO₂</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Device Breakdown -->
+                        <div class="report-section">
+                            <h3>Device Breakdown</h3>
+                            <div class="device-breakdown">
+                                <table id="deviceTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Device Name</th>
+                                            <th>Status</th>
+                                            <th>Monthly Usage</th>
+                                            <th>Monthly Cost</th>
+                                            <th>Savings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="deviceTableBody">
+                                        <!-- Device rows will be added here dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Usage Trends -->
+                        <div class="report-section">
+                            <h3>Usage Trends</h3>
+                            <div class="trends-container">
+                                <div class="trend-card">
+                                    <h4>Daily Usage Pattern</h4>
+                                    <div class="trend-chart" id="dailyTrendChart">
+                                        <!-- Chart will be added here -->
+                                        <div class="placeholder-chart">Daily usage chart placeholder</div>
+                                    </div>
+                                </div>
+                                <div class="trend-card">
+                                    <h4>Monthly Usage Pattern</h4>
+                                    <div class="trend-chart" id="monthlyTrendChart">
+                                        <!-- Chart will be added here -->
+                                        <div class="placeholder-chart">Monthly usage chart placeholder</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Recommendations -->
+                        <div class="report-section">
+                            <h3>Energy Saving Recommendations</h3>
+                            <div class="recommendations-list" id="recommendationsList">
+                                <!-- Recommendations will be added here dynamically -->
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="bottom-nav">
+        <button class="nav-button" onclick="window.location.href='dashboard.html'">Dashboard</button>
+        <button class="nav-button" onclick="window.location.href='addDevice.html'">Add Device</button>
+        <button class="nav-button" onclick="window.location.href='profile-settings.html'">Profile</button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="js/auth.js?v=2"></script>
+    <script src="js/report.js?v=1"></script>
+</body>
+</html> 
