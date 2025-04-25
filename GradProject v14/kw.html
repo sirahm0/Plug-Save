@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="EN">
+
+<head>
+     <!-- Firebase SDK -->
+     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js?v=2"></script>
+     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js?v=2"></script>
+     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js?v=2"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link href="css/styles.css?v=2" rel="stylesheet" />
+   
+    <script src="js/auth.js?v=2"></script>
+    <script src="js/script.js?v=2"></script>
+    <script src="js/enter-kw.js?v=2"></script>
+    <title>Enter KW Value - Plug&amp;Save</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo"><span class="icon">⚡</span>
+                <h1>Plug&amp;Save</h1>
+            </div>
+            <h2>Enter KW Value</h2>
+            <p>Enter the kilowatt (KW) value for your device. 
+                This information will be used to calculate energy consumption and costs Just for Testing.</p>
+        </div>
+        <div class="right-panel">
+            <div class="form-box">
+                <h2>KW Details</h2>
+                <form id="kwForm">
+                    <div class="form-group">
+                        <label for="kwValue">KW Value</label>
+                        <input id="kwValue" type="number" step="0.01" min="0" placeholder="Enter KW value" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="deviceSelect">Select Device</label>
+                        <select id="deviceSelect" required>
+                            <option value="">Select a device</option>
+                        </select>
+                    </div>
+                    <div class="button-group">
+                        <button class="primary-button" type="submit">Save KW Value</button>
+                        <button class="secondary-button" type="button" onclick="resetDeviceKW()">Reset KW</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <nav class="bottom-nav">
+        <button class="nav-button" onclick="switchToDash()">Dashboard</button>
+        <button class="nav-button" onclick="switchToAddDev()">Add Device</button>
+        <button class="nav-button" onclick="switchToReport()">View Report</button>
+    </nav>
+</body>
+
+</html> 
